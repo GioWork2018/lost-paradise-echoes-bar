@@ -37,18 +37,33 @@ export const EvocativeCTA: React.FC<EvocativeCTAProps> = ({
     }
   };
 
-  const Comp = external ? 'a' : Link;
-  const linkProps = external ? { href: to, target: "_blank", rel: "noopener noreferrer" } : { to };
-
+  // Instead of conditionally rendering different components with different props,
+  // we'll render them separately based on the 'external' prop
+  if (external) {
+    return (
+      <a 
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${baseClasses} ${className}`}
+      >
+        <span className="flex items-center">
+          {text}
+          {getIcon()}
+        </span>
+      </a>
+    );
+  }
+  
   return (
-    <Comp 
-      {...linkProps}
+    <Link 
+      to={to}
       className={`${baseClasses} ${className}`}
     >
       <span className="flex items-center">
         {text}
         {getIcon()}
       </span>
-    </Comp>
+    </Link>
   );
 };
