@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Layout } from '../components/layout/Layout';
 import { IntroSection } from '../components/home/IntroSection';
 import { CageSection } from '../components/home/CageSection';
+import { SagomeCarousel } from '../components/home/SagomeCarousel';
 import { CollectionSection } from '../components/home/CollectionSection';
 import { ProjectSection } from '../components/home/ProjectSection';
 import { BookingSection } from '../components/home/BookingSection';
@@ -18,6 +19,7 @@ const Index: React.FC = () => {
     <Layout>
       <IntroSection />
       <CageSection />
+      <SagomeCarousel />
       <CollectionSection />
       <ProjectSection />
       <BookingSection />

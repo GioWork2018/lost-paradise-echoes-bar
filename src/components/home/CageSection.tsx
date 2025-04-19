@@ -8,8 +8,14 @@ interface Silhouette {
   id: number;
   name: string;
   position: {
-    top: string;
-    left: string;
+    mobile: {
+      top: string;
+      left: string;
+    },
+    desktop: {
+      top: string;
+      left: string;
+    }
   };
   color: string;
   size: string;
@@ -20,7 +26,10 @@ const silhouettes: Silhouette[] = [
   { 
     id: 1, 
     name: 'Cleon', 
-    position: { top: '20%', left: '15%' }, 
+    position: {
+      desktop: { top: '20%', left: '15%' },
+      mobile: { top: '15%', left: '25%' }
+    }, 
     color: 'bg-rust/70', 
     size: 'h-24 md:h-32',
     delay: 0.3
@@ -28,7 +37,10 @@ const silhouettes: Silhouette[] = [
   { 
     id: 2, 
     name: 'Swaney', 
-    position: { top: '30%', left: '70%' }, 
+    position: {
+      desktop: { top: '30%', left: '70%' },
+      mobile: { top: '30%', left: '60%' }
+    }, 
     color: 'bg-toxic/60', 
     size: 'h-28 md:h-40',
     delay: 0.7
@@ -36,7 +48,10 @@ const silhouettes: Silhouette[] = [
   { 
     id: 3, 
     name: 'Sugar', 
-    position: { top: '55%', left: '25%' }, 
+    position: {
+      desktop: { top: '55%', left: '25%' },
+      mobile: { top: '50%', left: '25%' }
+    }, 
     color: 'bg-acid/50', 
     size: 'h-20 md:h-36',
     delay: 0.5
@@ -44,7 +59,10 @@ const silhouettes: Silhouette[] = [
   { 
     id: 4, 
     name: 'JonnyBoy', 
-    position: { top: '45%', left: '60%' }, 
+    position: {
+      desktop: { top: '45%', left: '60%' },
+      mobile: { top: '65%', left: '60%' }
+    }, 
     color: 'bg-ash/60', 
     size: 'h-32 md:h-48',
     delay: 0.8
@@ -124,8 +142,8 @@ export const CageSection: React.FC = () => {
                 key={silhouette.id}
                 className="cage-silhouette cursor-pointer"
                 style={{ 
-                  top: silhouette.position.top, 
-                  left: silhouette.position.left,
+                  top: isMobile ? silhouette.position.mobile.top : silhouette.position.desktop.top, 
+                  left: isMobile ? silhouette.position.mobile.left : silhouette.position.desktop.left,
                   animationDelay: `${silhouette.delay}s`,
                   opacity: activeSilhouette === null || activeSilhouette === silhouette.id ? 1 : 0.2,
                   transform: `scale(${activeSilhouette === silhouette.id ? 1.1 : 1})`,

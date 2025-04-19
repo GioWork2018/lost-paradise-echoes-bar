@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { AudioPlayer } from '../ui/AudioPlayer';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,14 +30,22 @@ export const Navbar: React.FC = () => {
           <span className="text-rust">LOST</span> PARADISE
         </Link>
         
+        {/* AudioPlayer in navbar */}
+        <div className="hidden md:flex">
+          <AudioPlayer className="mr-6" />
+        </div>
+        
         {/* Mobile menu button */}
-        <button 
-          onClick={toggleMenu} 
-          className="md:hidden text-white focus:outline-none"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center">
+          <AudioPlayer className="mr-4" />
+          <button 
+            onClick={toggleMenu} 
+            className="text-white focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 font-mono text-sm uppercase tracking-wider">

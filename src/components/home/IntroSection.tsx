@@ -4,8 +4,6 @@ import { GlitchText } from '../ui/GlitchText';
 
 export const IntroSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [audioLoaded, setAudioLoaded] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
   
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -14,20 +12,6 @@ export const IntroSection: React.FC = () => {
     
     return () => clearTimeout(timer);
   }, []);
-
-  // Audio element (simulated audio loading)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAudioLoaded(true);
-    }, 1000);
-    
-    return () => clearTimeout(timer);
-  }, []);
-  
-  const toggleAudio = () => {
-    setIsPlaying(!isPlaying);
-    // Audio play logic would go here in a real implementation
-  };
 
   return (
     <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden px-4">
@@ -55,23 +39,6 @@ export const IntroSection: React.FC = () => {
         <p className="text-lg md:text-xl text-toxic/90 mb-4 font-mono mt-8">
           Qui il tempo è finito. Ma tu puoi ancora scegliere.
         </p>
-      </div>
-      
-      {/* Audio Control */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
-        <button
-          onClick={toggleAudio}
-          className={`flex items-center space-x-2 text-xs uppercase font-mono tracking-wider text-fog/70 hover:text-white transition-colors 
-            ${audioLoaded ? '' : 'animate-pulse opacity-50'}`}
-          disabled={!audioLoaded}
-        >
-          <span className="inline-block w-3 h-3 rounded-full bg-rust relative">
-            {isPlaying && (
-              <span className="absolute inset-0 rounded-full bg-rust animate-ping opacity-75"></span>
-            )}
-          </span>
-          <span>{isPlaying ? 'Disattiva Audio' : 'Attiva Audio'}</span>
-        </button>
       </div>
       
       {/* Scroll Indicator */}

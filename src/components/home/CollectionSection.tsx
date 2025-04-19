@@ -112,6 +112,7 @@ export const CollectionSection: React.FC = () => {
         <div className="text-center mt-12 md:mt-16">
           <EvocativeCTA 
             text="Raccogli il frammento perduto" 
+            hoverText="Entra nella collezione" 
             to="/collection" 
             className="mx-auto"
           />

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Eye, Shield, Skull, Zap } from 'lucide-react';
 
@@ -9,6 +9,7 @@ interface EvocativeCTAProps {
   className?: string;
   variant?: 'threshold' | 'reflect' | 'resist' | 'time' | 'collect' | 'default';
   external?: boolean;
+  hoverText?: string;
 }
 
 export const EvocativeCTA: React.FC<EvocativeCTAProps> = ({ 
@@ -16,9 +17,12 @@ export const EvocativeCTA: React.FC<EvocativeCTAProps> = ({
   to, 
   className = '',
   variant = 'default',
-  external = false
+  external = false,
+  hoverText
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const baseClasses = 'evocative-cta group';
+  const displayText = isHovered && hoverText ? hoverText : text;
   
   const getIcon = () => {
     switch (variant) {
@@ -37,6 +41,9 @@ export const EvocativeCTA: React.FC<EvocativeCTAProps> = ({
     }
   };
 
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
   // Instead of conditionally rendering different components with different props,
   // we'll render them separately based on the 'external' prop
   if (external) {
@@ -46,10 +53,19 @@ export const EvocativeCTA: React.FC<EvocativeCTAProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         className={`${baseClasses} ${className}`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        <span className="flex items-center">
-          {text}
-          {getIcon()}
+        <span className="flex items-center relative">
+          <span className={`transition-opacity duration-300 ${isHovered && hoverText ? 'opacity-0' : 'opacity-100'}`}>
+            {text}
+          </span>
+          <span className={`absolute left-0 transition-opacity duration-300 ${isHovered && hoverText ? 'opacity-100' : 'opacity-0'}`}>
+            {hoverText}
+          </span>
+          <span className="ml-2">
+            {getIcon()}
+          </span>
         </span>
       </a>
     );
@@ -59,10 +75,21 @@ export const EvocativeCTA: React.FC<EvocativeCTAProps> = ({
     <Link 
       to={to}
       className={`${baseClasses} ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <span className="flex items-center">
-        {text}
-        {getIcon()}
+      <span className="flex items-center relative">
+        <span className={`transition-opacity duration-300 ${isHovered && hoverText ? 'opacity-0' : 'opacity-100'}`}>
+          {text}
+        </span>
+        {hoverText && (
+          <span className={`absolute left-0 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+            {hoverText}
+          </span>
+        )}
+        <span className="ml-2">
+          {getIcon()}
+        </span>
       </span>
     </Link>
   );
