@@ -102,7 +102,8 @@
   }
 
   .tilt-container {
-    @apply transition-transform duration-200 transform perspective-1000;
+    @apply transition-transform duration-200 transform;
+    perspective: 1000px;
     will-change: transform;
   }
 
