@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Carousel,
@@ -20,25 +19,46 @@ interface Sagoma {
 
 const sagome: Sagoma[] = [
   {
-    id: "cleon",
-    name: "Cleon",
-    description: "Il guardiano della memoria collettiva, intrappolato tra passato e futuro.",
+    id: "ceafb602",
+    name: "Teschio",
+    description: "Custode dei segreti più oscuri, porta con sé il peso della mortalità.",
     color: "bg-rust/80",
-    image: "/lovable-uploads/3e97bb96-1c91-4a43-8392-3f69e3a7d2b5.png"
+    image: "/lovable-uploads/ceafb602-f427-4e0b-948f-4ff524025276.png"
   },
   {
-    id: "kyashan",
-    name: "Kyashan",
-    description: "Simbolo della tecnologia ribelle, cerca un'anima in un corpo meccanico.",
+    id: "622c20a4",
+    name: "Pistolero",
+    description: "Un guerriero urbano che sfida il sistema con due pistole e nessuna paura.",
     color: "bg-toxic/80",
-    image: "/lovable-uploads/332b58a5-43ae-472f-aeb4-6dc1792b1ba0.png"
+    image: "/lovable-uploads/622c20a4-148b-453f-833e-9331c04e130e.png"
   },
   {
-    id: "luffy",
-    name: "Luffy",
-    description: "Esploratore dell'ignoto, porta con sé la leggerezza dell'innocenza.",
+    id: "8bebb6f5",
+    name: "Viandante",
+    description: "Un esploratore solitario che porta la luce nelle tenebre del mondo perduto.",
+    color: "bg-toxic/80",
+    image: "/lovable-uploads/8bebb6f5-ea2c-41ec-804e-b0ab8604533f.png"
+  },
+  {
+    id: "57f3da4c",
+    name: "Rospo",
+    description: "Guardiano degli stagni tossici, custodisce antiche conoscenze.",
     color: "bg-acid/70",
-    image: "/lovable-uploads/98fbe2ec-8767-4c1a-baf5-d8aa8ce9c81d.png"
+    image: "/lovable-uploads/57f3da4c-ba65-44a1-8f1d-df487af35de4.png"
+  },
+  {
+    id: "a733f052",
+    name: "Atleta",
+    description: "Un giocatore che sfida le regole del gioco in un mondo senza regole.",
+    color: "bg-acid/70",
+    image: "/lovable-uploads/a733f052-f770-4f81-89a9-5996a564e028.png"
+  },
+  {
+    id: "15605840",
+    name: "Pillolaio",
+    description: "Dispensatore di verità e illusioni, tiene in mano il destino della percezione.",
+    color: "bg-acid/70",
+    image: "/lovable-uploads/15605840-87cd-4791-bcf6-8cfe41e12477.png"
   }
 ];
 
@@ -81,7 +101,7 @@ export const SagomeCarousel: React.FC = () => {
                           alt={sagoma.name}
                           className="h-full w-auto object-contain animate-float"
                           style={{
-                            animationDelay: `${sagome.indexOf(sagoma) * 0.5}s`
+                            animationDelay: `${sagoma.indexOf(sagoma) * 0.5}s`
                           }}
                         />
                         {activeSagoma === sagoma.id && (
