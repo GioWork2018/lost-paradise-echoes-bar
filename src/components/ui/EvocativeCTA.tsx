@@ -15,7 +15,7 @@ export const EvocativeCTA: React.FC<EvocativeCTAProps> = ({
   className = '', 
   external = false 
 }) => {
-  const baseClasses = 'evocative-cta';
+  const baseClasses = 'evocative-cta group';
   
   if (external) {
     return (
