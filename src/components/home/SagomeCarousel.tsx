@@ -15,6 +15,7 @@ interface Sagoma {
   name: string;
   description: string;
   color: string;
+  image: string;
 }
 
 const sagome: Sagoma[] = [
@@ -22,43 +23,22 @@ const sagome: Sagoma[] = [
     id: "cleon",
     name: "Cleon",
     description: "Il guardiano della memoria collettiva, intrappolato tra passato e futuro.",
-    color: "bg-rust/80"
+    color: "bg-rust/80",
+    image: "/lovable-uploads/3e97bb96-1c91-4a43-8392-3f69e3a7d2b5.png"
   },
   {
     id: "kyashan",
     name: "Kyashan",
     description: "Simbolo della tecnologia ribelle, cerca un'anima in un corpo meccanico.",
-    color: "bg-toxic/80"
+    color: "bg-toxic/80",
+    image: "/lovable-uploads/332b58a5-43ae-472f-aeb4-6dc1792b1ba0.png"
   },
   {
     id: "luffy",
     name: "Luffy",
     description: "Esploratore dell'ignoto, porta con sé la leggerezza dell'innocenza.",
-    color: "bg-acid/70"
-  },
-  {
-    id: "jonnyboy",
-    name: "JonnyBoy",
-    description: "Il prototipo dell'individualità pura, resiste all'assimilazione.",
-    color: "bg-white/40"
-  },
-  {
-    id: "momi",
-    name: "Momi",
-    description: "Custode delle emozioni perdute, raccoglie frammenti di umanità.",
-    color: "bg-dust/70"
-  },
-  {
-    id: "swaney",
-    name: "Swaney",
-    description: "Artista del caos, trasforma la distruzione in bellezza fugace.",
-    color: "bg-toxic/60"
-  },
-  {
-    id: "sugar",
-    name: "Sugar",
-    description: "Depositaria della dolcezza in un mondo amaro, simbolo di resistenza.",
-    color: "bg-acid/50"
+    color: "bg-acid/70",
+    image: "/lovable-uploads/98fbe2ec-8767-4c1a-baf5-d8aa8ce9c81d.png"
   }
 ];
 
@@ -90,17 +70,18 @@ export const SagomeCarousel: React.FC = () => {
                 <CarouselItem key={sagoma.id} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <div 
-                      className={`aspect-[2/3] rounded-sm p-6 flex flex-col justify-end border border-fog/20 bg-night/80 hover:border-toxic/50 transition-all cursor-pointer ${
+                      className={`aspect-[3/4] rounded-sm p-6 flex flex-col justify-end border border-fog/20 bg-night/80 hover:border-toxic/50 transition-all cursor-pointer ${
                         activeSagoma === sagoma.id ? "border-toxic" : ""
                       }`}
                       onClick={() => setActiveSagoma(activeSagoma === sagoma.id ? null : sagoma.id)}
                     >
                       <div className="flex-1 flex items-center justify-center relative">
-                        <div 
-                          className={`${sagoma.color} h-36 w-12 md:h-40 md:w-14 animate-float`}
+                        <img 
+                          src={sagoma.image} 
+                          alt={sagoma.name}
+                          className="h-full w-auto object-contain animate-float"
                           style={{
-                            maskImage: "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 60\"><path d=\"M12,0 C16,15 24,20 24,35 C24,48 18,60 12,60 C6,60 0,48 0,35 C0,20 8,15 12,0 Z\" /></svg>')",
-                            WebkitMaskImage: "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 60\"><path d=\"M12,0 C16,15 24,20 24,35 C24,48 18,60 12,60 C6,60 0,48 0,35 C0,20 8,15 12,0 Z\" /></svg>')",
+                            animationDelay: `${sagome.indexOf(sagoma) * 0.5}s`
                           }}
                         />
                         {activeSagoma === sagoma.id && (
@@ -123,7 +104,7 @@ export const SagomeCarousel: React.FC = () => {
         </div>
         
         {activeSagoma && (
-          <ParallaxElement className="mt-8 max-w-lg mx-auto p-4 border border-rust/20 bg-night/60 rounded-sm animate-fade-in text-center">
+          <ParallaxElement className="mt-8 max-w-lg mx-auto p-4 border border-rust/20 bg-night/60 rounded-sm animate-fade-in">
             <p className="text-sm text-fog/90 italic">
               "{sagome.find(s => s.id === activeSagoma)?.name} incarna la fragilità e la resilienza dell'anima umana. Una figura che sfida il tempo, un testimone muto del nostro passaggio."
             </p>

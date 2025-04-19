@@ -48,7 +48,7 @@ export const ContactOptions = () => {
           </p>
           <EvocativeCTA 
             text="PARTECIPA ALL'EVENTO" 
-            to="https://lu.ma"
+            to="https://lu.ma/ftvdm5dt"
             variant="resist"
             external={true}
             hoverText="UNISCITI A NOI"
