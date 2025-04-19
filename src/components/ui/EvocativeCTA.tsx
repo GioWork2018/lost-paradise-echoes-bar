@@ -8,13 +8,15 @@ interface EvocativeCTAProps {
   to: string;
   className?: string;
   variant?: 'threshold' | 'reflect' | 'resist' | 'time' | 'collect' | 'default';
+  external?: boolean;
 }
 
 export const EvocativeCTA: React.FC<EvocativeCTAProps> = ({ 
   text, 
   to, 
   className = '',
-  variant = 'default'
+  variant = 'default',
+  external = false
 }) => {
   const baseClasses = 'evocative-cta group';
   
@@ -35,15 +37,18 @@ export const EvocativeCTA: React.FC<EvocativeCTAProps> = ({
     }
   };
 
+  const Comp = external ? 'a' : Link;
+  const linkProps = external ? { href: to, target: "_blank", rel: "noopener noreferrer" } : { to };
+
   return (
-    <Link 
-      to={to} 
+    <Comp 
+      {...linkProps}
       className={`${baseClasses} ${className}`}
     >
       <span className="flex items-center">
         {text}
         {getIcon()}
       </span>
-    </Link>
+    </Comp>
   );
 };
