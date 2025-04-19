@@ -1,6 +1,8 @@
 
 import { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
+import { BookingFields } from './BookingFields';
+import { BookingInterests } from './BookingInterests';
 
 interface BookingFormProps {
   onSubmit: () => void;
@@ -46,105 +48,19 @@ export const BookingForm = ({ onSubmit }: BookingFormProps) => {
         <h2 className="text-2xl font-display mb-6">Modulo di Prenotazione</h2>
         
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="name" className="block text-sm font-mono text-fog/80 mb-2">
-              NOME COMPLETO
-            </label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 bg-night border border-fog/30 rounded-sm text-white focus:outline-none focus:border-toxic"
-              required
-            />
-          </div>
+          <BookingFields 
+            name={name}
+            email={email}
+            message={message}
+            onNameChange={setName}
+            onEmailChange={setEmail}
+            onMessageChange={setMessage}
+          />
           
-          <div>
-            <label htmlFor="email" className="block text-sm font-mono text-fog/80 mb-2">
-              EMAIL
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 bg-night border border-fog/30 rounded-sm text-white focus:outline-none focus:border-toxic"
-              required
-            />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-mono text-fog/80 mb-2">
-              OPERE DI INTERESSE
-            </label>
-            <div className="space-y-2">
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="sagome"
-                  checked={interest.includes('sagome')}
-                  onChange={() => handleInterestChange('sagome')}
-                  className="w-4 h-4 bg-transparent border border-fog/30 rounded-sm focus:outline-none focus:border-toxic mr-3"
-                />
-                <label htmlFor="sagome" className="text-sm text-fog/90">
-                  15 Sagome Originali in Legno (€12.000 cad.)
-                </label>
-              </div>
-              
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="stampe"
-                  checked={interest.includes('stampe')}
-                  onChange={() => handleInterestChange('stampe')}
-                  className="w-4 h-4 bg-transparent border border-fog/30 rounded-sm focus:outline-none focus:border-toxic mr-3"
-                />
-                <label htmlFor="stampe" className="text-sm text-fog/90">
-                  15 Stampe Artistiche (€3.000 cad.)
-                </label>
-              </div>
-              
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="tela"
-                  checked={interest.includes('tela')}
-                  onChange={() => handleInterestChange('tela')}
-                  className="w-4 h-4 bg-transparent border border-fog/30 rounded-sm focus:outline-none focus:border-toxic mr-3"
-                />
-                <label htmlFor="tela" className="text-sm text-fog/90">
-                  "Lost Paradise" - Dipinto su Tela (Prezzo su richiesta)
-                </label>
-              </div>
-              
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="toy"
-                  checked={interest.includes('toy')}
-                  onChange={() => handleInterestChange('toy')}
-                  className="w-4 h-4 bg-transparent border border-fog/30 rounded-sm focus:outline-none focus:border-toxic mr-3"
-                />
-                <label htmlFor="toy" className="text-sm text-fog/90">
-                  Toy "Fresh Start Day" (€340)
-                </label>
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <label htmlFor="message" className="block text-sm font-mono text-fog/80 mb-2">
-              MESSAGGIO (OPZIONALE)
-            </label>
-            <textarea
-              id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              rows={4}
-              className="w-full px-4 py-2 bg-night border border-fog/30 rounded-sm text-white focus:outline-none focus:border-toxic"
-            ></textarea>
-          </div>
+          <BookingInterests 
+            interest={interest}
+            onInterestChange={handleInterestChange}
+          />
           
           <button
             type="submit"
