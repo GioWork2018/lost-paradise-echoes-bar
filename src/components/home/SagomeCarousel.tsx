@@ -54,10 +54,9 @@ export const SagomeCarousel: React.FC = () => {
         
         {activeSagoma && (
           <ParallaxElement className="mt-8 max-w-lg mx-auto p-4 border border-rust/20 bg-night/60 rounded-sm animate-fade-in">
-            <p className="text-sm text-fog/90 italic">
-              "{sagome.find(s => s.id === activeSagoma)?.name} incarna la fragilità e la resilienza dell'anima umana. Una figura che sfida il tempo, un testimone muto del nostro passaggio."
+            <p className="text-sm text-fog/90 italic text-center">
+              {sagome.find(s => s.id === activeSagoma)?.description}
             </p>
-            <p className="text-right text-xs text-fog/60 mt-2">— Giovanni Motta</p>
           </ParallaxElement>
         )}
       </div>

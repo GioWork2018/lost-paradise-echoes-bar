@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Layout } from '../components/layout/Layout';
 import { ParallaxElement } from '../components/ui/ParallaxElement';
@@ -30,7 +29,13 @@ const Collection: React.FC = () => {
             {/* Sagome */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <ParallaxElement>
-                <div className="aspect-square max-w-md mx-auto bg-night rusty-border"></div>
+                <div className="aspect-square max-w-md mx-auto rusty-border">
+                  <img 
+                    src="/lovable-uploads/f0fa3fd8-d248-494e-8fd8-1204771b4569.png" 
+                    alt="Le 15 Sagome Originali"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </ParallaxElement>
               
               <div>
