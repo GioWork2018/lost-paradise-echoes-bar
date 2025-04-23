@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ParallaxElement } from '../ui/ParallaxElement';
 import { EvocativeCTA } from '../ui/EvocativeCTA';
@@ -25,8 +24,11 @@ const Artifact: React.FC<ArtifactProps> = ({
       <div className="p-4 md:p-6 flex flex-col h-full">
         <div className="rusty-border mb-4">
           <div className="aspect-square bg-night/60 relative overflow-hidden">
-            {/* Replace with actual image */}
-            <div className={`w-full h-full bg-${image} bg-cover bg-center`}></div>
+            <img 
+              src={image} 
+              alt={title}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
         
@@ -73,7 +75,7 @@ export const CollectionSection: React.FC = () => {
               title="15 Sagome Originali"
               description="Pezzi unici dipinti a mano in acrilico, con altezze variabili."
               price="€12.000"
-              image="night"
+              image="/lovable-uploads/f0fa3fd8-d248-494e-8fd8-1204771b4569.png"
               details={["Altezze da 120 a 150 cm", "Simbolo dell'interiorità", "Acrilico su legno"]}
             />
           </ParallaxElement>
@@ -83,7 +85,7 @@ export const CollectionSection: React.FC = () => {
               title="15 Stampe Artistiche"
               description="Stampe in alta qualità incorniciate artigianalmente con vetro museale."
               price="€3.000"
-              image="dust"
+              image="/lovable-uploads/4f14bea5-85e8-4be7-a551-6a66bcf48cb2.png"
               details={["50 x 70 cm", "Carta Archer 320gr", "Stampa flottante"]}
             />
           </ParallaxElement>
@@ -93,7 +95,7 @@ export const CollectionSection: React.FC = () => {
               title="Lost Paradise"
               description="Dipinto Acrilico su Tela, manifesto visivo del progetto."
               price="Su richiesta"
-              image="rust"
+              image="/lovable-uploads/332b58a5-43ae-472f-aeb4-6dc1792b1ba0.png"
               details={["100 x 150 cm", "Collaborazione con Maddox Gallery", "Opera principale"]}
             />
           </ParallaxElement>
@@ -103,7 +105,7 @@ export const CollectionSection: React.FC = () => {
               title="Fresh Start Day"
               description="Toy da Collezione in Resina, edizione limitata firmata e autenticata."
               price="€340"
-              image="jonnyboy"
+              image="/lovable-uploads/5a3b58a5-43ae-472f-aeb4-6dc1792b1ba0.png"
               details={["Altezza 23 cm", "Edizione limitata di 99 pezzi", "Box design esclusivo"]}
             />
           </ParallaxElement>

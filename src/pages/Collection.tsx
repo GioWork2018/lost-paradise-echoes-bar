@@ -148,7 +148,13 @@ const Collection: React.FC = () => {
             {/* Lost Paradise */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <ParallaxElement>
-                <div className="aspect-[2/3] max-w-md mx-auto bg-rust rusty-border"></div>
+                <div className="aspect-[2/3] max-w-md mx-auto rusty-border">
+                  <img 
+                    src="/lovable-uploads/332b58a5-43ae-472f-aeb4-6dc1792b1ba0.png" 
+                    alt="Lost Paradise"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </ParallaxElement>
               
               <div>
