@@ -24,8 +24,9 @@ export const ContactOptions = () => {
           </p>
           <EvocativeCTA 
             text="PRENOTA LE OPERE" 
-            to="/booking"
+            to="https://giovannimotta.it/contacts"
             variant="threshold"
+            external={true}
             hoverText="PRIMA DELLA FINE"
           />
         </CardContent>

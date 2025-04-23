@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -52,7 +51,6 @@ export const Navbar: React.FC = () => {
           <Link to="/" className="text-fog hover:text-toxic transition-colors duration-300">Home</Link>
           <Link to="/collection" className="text-fog hover:text-toxic transition-colors duration-300">Collezione</Link>
           <Link to="/project" className="text-fog hover:text-toxic transition-colors duration-300">Progetto</Link>
-          <Link to="/booking" className="text-fog hover:text-toxic transition-colors duration-300">Prenota</Link>
         </nav>
       </div>
       
@@ -80,13 +78,6 @@ export const Navbar: React.FC = () => {
               className="py-2 text-fog hover:text-toxic transition-colors duration-300"
             >
               Progetto
-            </Link>
-            <Link 
-              to="/booking" 
-              onClick={toggleMenu}
-              className="py-2 text-fog hover:text-toxic transition-colors duration-300"
-            >
-              Prenota
             </Link>
           </div>
         </div>

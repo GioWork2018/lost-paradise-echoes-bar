@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ParallaxElement } from '../ui/ParallaxElement';
 import { GlitchText } from '../ui/GlitchText';
@@ -27,54 +26,55 @@ export const ProjectSection: React.FC = () => {
                 "Un nuovo progetto che esplora un mondo post-apocalittico dove sopravvive solo l'astrazione della giovinezza."
               </p>
             </ParallaxElement>
-            
-            <div className="space-y-6 md:space-y-8 text-fog/90">
-              <ParallaxElement>
-                <div className="rusty-border p-4">
-                  <p className="text-sm md:text-base leading-relaxed">
-                    Il pittore e artista digitale Giovanni Motta presenta <strong>Lost Paradise</strong>, una collezione potente 
-                    e immersiva composta da 15 sagome in legno dipinte a mano, 15 stampe artistiche incorniciate artigianalmente, 
-                    un toy in resina da collezione e un grande dipinto su tela che segna l'inizio della collaborazione ufficiale 
-                    con la Maddox Gallery di Londra.
-                  </p>
-                </div>
-              </ParallaxElement>
-              
-              <ParallaxElement>
-                <p className="text-sm md:text-base leading-relaxed">
-                  Attraverso la figura di JonnyBoy, suo alter ego e simbolo dell'interiorità che resiste, Motta ci porta 
-                  in un viaggio emotivo tra macerie e rinascita. La gabbia che vediamo è uno specchio della nostra condizione, 
-                  un confine tra chi è fuori e chi è dentro, tra chi osserva e chi è osservato.
-                </p>
-              </ParallaxElement>
-              
-              <ParallaxElement className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="flex-1">
-                  <div className="aspect-square max-w-xs mx-auto bg-jonnyboy bg-cover bg-center bg-no-repeat rusty-border"></div>
-                </div>
-                
-                <div className="flex-1">
-                  <p className="text-sm md:text-base leading-relaxed">
-                    In questo mondo distrutto, dove il tempo stesso sembra essersi fermato, i colori acidi e le forme pure 
-                    di JonnyBoy rompono la monotonia della desolazione. Come un archeologo del futuro, Motta disegna reperti 
-                    che raccontano la nostra epoca e ne prevedono il possibile esito.
-                  </p>
-                  
-                  <p className="text-sm md:text-base leading-relaxed mt-4">
-                    Non è una distopia, è un invito alla riflessione: quanto siamo disposti a cedere prima di reagire? 
-                    Cosa resta di noi quando tutto ciò che conosciamo svanisce?
-                  </p>
-                </div>
-              </ParallaxElement>
-            </div>
           </div>
           
-          <div className="text-center">
-            <EvocativeCTA 
-              text="Varca la soglia" 
-              to="/project" 
-              className="mx-auto"
-            />
+          <div className="space-y-6 md:space-y-8 text-fog/90">
+            <ParallaxElement>
+              <div className="aspect-video w-full bg-night rusty-border relative overflow-hidden mb-8">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: "url('/lovable-uploads/dfd0caf0-f502-4a67-95ff-5bee5a224c9f.png')" }}
+                />
+              </div>
+            </ParallaxElement>
+
+            <ParallaxElement>
+              <div className="rusty-border p-4">
+                <p className="text-sm md:text-base leading-relaxed">
+                  Il pittore e artista digitale Giovanni Motta presenta <strong>Lost Paradise</strong>, una collezione potente 
+                  e immersiva composta da 15 sagome in legno dipinte a mano, 15 stampe artistiche incorniciate artigianalmente, 
+                  un toy in resina da collezione e un grande dipinto su tela che segna l'inizio della collaborazione ufficiale 
+                  con la Maddox Gallery di Londra.
+                </p>
+              </div>
+            </ParallaxElement>
+            
+            <ParallaxElement>
+              <p className="text-sm md:text-base leading-relaxed">
+                Attraverso la figura di JonnyBoy, suo alter ego e simbolo dell'interiorità che resiste, Motta ci porta 
+                in un viaggio emotivo tra macerie e rinascita. La gabbia che vediamo è uno specchio della nostra condizione, 
+                un confine tra chi è fuori e chi è dentro, tra chi osserva e chi è osservato.
+              </p>
+            </ParallaxElement>
+            
+            <ParallaxElement className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="flex-1">
+                <div className="aspect-square max-w-xs mx-auto bg-jonnyboy bg-cover bg-center bg-no-repeat rusty-border"></div>
+              </div>
+              
+              <div className="flex-1">
+                <p className="text-sm md:text-base leading-relaxed">
+                  In questo mondo distrutto, dove il tempo stesso sembra essersi fermato, i colori acidi e le forme pure 
+                  di JonnyBoy rompono la monotonia della desolazione. Come un archeologo del futuro, Motta disegna reperti 
+                  che raccontano la nostra epoca e ne prevedono il possibile esito.
+                </p>
+                
+                <p className="text-sm md:text-base leading-relaxed mt-4">
+                  Non è una distopia, è un invito alla riflessione: quanto siamo disposti a cedere prima di reagire? 
+                  Cosa resta di noi quando tutto ciò che conosciamo svanisce?
+                </p>
+              </div>
+            </ParallaxElement>
           </div>
         </div>
       </div>
