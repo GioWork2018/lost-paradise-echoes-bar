@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ParallaxElement } from '../ui/ParallaxElement';
 import { EvocativeCTA } from '../ui/EvocativeCTA';
@@ -105,7 +106,7 @@ export const CollectionSection: React.FC = () => {
               title="Fresh Start Day"
               description="Toy da Collezione in Resina, edizione limitata firmata e autenticata."
               price="€340"
-              image="/lovable-uploads/5a3b58a5-43ae-472f-aeb4-6dc1792b1ba0.png"
+              image="/lovable-uploads/af2a387a-4dab-4467-843e-8faca8c4305d.png"
               details={["Altezza 23 cm", "Edizione limitata di 99 pezzi", "Box design esclusivo"]}
             />
           </ParallaxElement>
@@ -114,8 +115,9 @@ export const CollectionSection: React.FC = () => {
         <div className="text-center mt-12 md:mt-16">
           <EvocativeCTA 
             text="Raccogli il frammento perduto" 
-            hoverText="Entra nella collezione" 
-            to="/collection" 
+            hoverText="Contatta l'artista" 
+            to="https://giovannimotta.it/contacts" 
+            external={true}
             className="mx-auto"
           />
         </div>

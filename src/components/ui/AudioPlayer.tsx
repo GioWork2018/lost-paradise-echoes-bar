@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 
@@ -9,16 +8,15 @@ interface AudioPlayerProps {
 }
 
 export const AudioPlayer: React.FC<AudioPlayerProps> = ({
-  audioSrc = '/ambient-dystopia.mp3', // Placeholder audio file path
+  audioSrc = '/ambient-dystopia.mp3',
   className = '',
-  defaultPlaying = false
+  defaultPlaying = true
 }) => {
   const [isPlaying, setIsPlaying] = useState(defaultPlaying);
   const [isLoaded, setIsLoaded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Create audio element
     const audio = new Audio(audioSrc);
     audio.loop = true;
     audio.volume = 0.4;
@@ -32,7 +30,6 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
     });
 
     return () => {
-      // Cleanup
       audio.pause();
       audio.src = '';
       audio.remove();

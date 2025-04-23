@@ -248,8 +248,9 @@ const Collection: React.FC = () => {
                 <div className="flex justify-between items-center">
                   <div className="font-mono text-xl text-toxic">€340</div>
                   <EvocativeCTA 
-                    text="Prenota ora" 
-                    to="/booking"
+                    text="Contatta l'artista" 
+                    to="https://giovannimotta.it/contacts"
+                    external={true}
                   />
                 </div>
               </div>
@@ -268,8 +269,9 @@ const Collection: React.FC = () => {
                 className="flex-1 justify-center"
               />
               <EvocativeCTA 
-                text="Prenota le opere" 
-                to="/booking" 
+                text="Contatta l'artista" 
+                to="https://giovannimotta.it/contacts" 
+                external={true}
                 className="flex-1 justify-center"
               />
             </div>

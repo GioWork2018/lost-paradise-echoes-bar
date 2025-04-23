@@ -5,7 +5,6 @@ import { IntroSection } from '../components/home/IntroSection';
 import { SagomeCarousel } from '../components/home/SagomeCarousel';
 import { CollectionSection } from '../components/home/CollectionSection';
 import { ProjectSection } from '../components/home/ProjectSection';
-import { BookingSection } from '../components/home/BookingSection';
 import { EventSection } from '../components/home/EventSection';
 
 const Index: React.FC = () => {
@@ -19,7 +18,6 @@ const Index: React.FC = () => {
       <SagomeCarousel />
       <CollectionSection />
       <ProjectSection />
-      <BookingSection />
       <EventSection />
     </Layout>
   );
