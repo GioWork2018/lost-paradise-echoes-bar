@@ -5,7 +5,7 @@ import { IntroSection } from '../components/home/IntroSection';
 import { SagomeCarousel } from '../components/home/SagomeCarousel';
 import { CollectionSection } from '../components/home/CollectionSection';
 import { ProjectSection } from '../components/home/ProjectSection';
-import { EventSection } from '../components/home/EventSection';
+import { LocationSection } from '../components/home/LocationSection';
 
 const Index: React.FC = () => {
   useEffect(() => {
@@ -18,7 +18,7 @@ const Index: React.FC = () => {
       <SagomeCarousel />
       <CollectionSection />
       <ProjectSection />
-      <EventSection />
+      <LocationSection />
     </Layout>
   );
 };

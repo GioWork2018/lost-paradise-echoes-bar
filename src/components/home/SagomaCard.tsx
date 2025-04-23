@@ -13,7 +13,7 @@ export const SagomaCard: React.FC<SagomaCardProps> = ({ sagoma, isActive, onTogg
   return (
     <div className="p-2">
       <div 
-        className={`aspect-[3/4] rounded-sm p-6 flex flex-col justify-end border border-fog/20 bg-night/80 hover:border-toxic/50 transition-all cursor-pointer ${
+        className={`h-[400px] rounded-sm p-6 flex flex-col justify-end border border-fog/20 bg-night/80 hover:border-toxic/50 transition-all cursor-pointer ${
           isActive ? "border-toxic" : ""
         }`}
         onClick={onToggle}
@@ -22,7 +22,7 @@ export const SagomaCard: React.FC<SagomaCardProps> = ({ sagoma, isActive, onTogg
           <img 
             src={sagoma.image} 
             alt="Sagoma"
-            className="h-full w-auto object-contain animate-float"
+            className="max-h-[280px] w-auto object-contain animate-float"
             style={{
               animationDelay: `${index * 0.5}s`
             }}

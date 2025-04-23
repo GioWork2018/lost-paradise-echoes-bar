@@ -31,10 +31,6 @@ export const ProjectSection: React.FC = () => {
           <div className="space-y-6 md:space-y-8 text-fog/90">
             <ParallaxElement>
               <div className="aspect-video w-full bg-night rusty-border relative overflow-hidden mb-8">
-                <div 
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: "url('/lovable-uploads/dfd0caf0-f502-4a67-95ff-5bee5a224c9f.png')" }}
-                />
               </div>
             </ParallaxElement>
 
