@@ -135,7 +135,13 @@ const Collection: React.FC = () => {
               </div>
               
               <ParallaxElement className="order-1 md:order-2">
-                <div className="aspect-square max-w-md mx-auto bg-ash rusty-border"></div>
+                <div className="aspect-square max-w-md mx-auto rusty-border">
+                  <img 
+                    src="/lovable-uploads/4f14bea5-85e8-4be7-a551-6a66bcf48cb2.png"
+                    alt="Le 15 Stampe Artistiche"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </ParallaxElement>
             </div>
             

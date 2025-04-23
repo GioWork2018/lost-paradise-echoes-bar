@@ -21,7 +21,7 @@ export const SagomaCard: React.FC<SagomaCardProps> = ({ sagoma, isActive, onTogg
         <div className="flex-1 flex items-center justify-center relative">
           <img 
             src={sagoma.image} 
-            alt={sagoma.name}
+            alt="Sagoma"
             className="h-full w-auto object-contain animate-float"
             style={{
               animationDelay: `${index * 0.5}s`
@@ -34,8 +34,7 @@ export const SagomaCard: React.FC<SagomaCardProps> = ({ sagoma, isActive, onTogg
           )}
         </div>
         
-        <h3 className="font-display text-xl mt-4 text-center">{sagoma.name}</h3>
-        <p className="text-xs text-fog/60 mt-1 text-center font-mono">
+        <p className="text-xs text-fog/60 mt-4 text-center font-mono">
           {isActive ? "Clicca per chiudere" : "Clicca per scoprire"}
         </p>
       </div>
