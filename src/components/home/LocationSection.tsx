@@ -37,7 +37,7 @@ export const LocationSection: React.FC = () => {
                     </p>
                     <EvocativeCTA 
                       text="Registrati su Lu.ma" 
-                      to="https://lu.ma" 
+                      to="https://lu.ma/ftvdm5dt" 
                       className="text-sm w-full justify-center"
                       external={true}
                     />
