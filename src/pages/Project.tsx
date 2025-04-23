@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Layout } from '../components/layout/Layout';
 import { ParallaxElement } from '../components/ui/ParallaxElement';
@@ -87,7 +86,12 @@ const Project: React.FC = () => {
               
               <ParallaxElement>
                 <div className="aspect-[21/9] w-full bg-night rusty-border relative overflow-hidden">
-                  <div className="absolute inset-0 bg-dust-texture bg-cover opacity-30"></div>
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center opacity-80" 
+                    style={{ 
+                      backgroundImage: "url('/lovable-uploads/160da050-cb2f-42ad-b52b-80a6f7fcd830.png')" 
+                    }}
+                  ></div>
                 </div>
               </ParallaxElement>
               
@@ -101,7 +105,7 @@ const Project: React.FC = () => {
                   </p>
                   <p className="text-fog/80">
                     Guardando la gabbia, ci vediamo riflessi - intrappolati nelle nostre abitudini,
-                    nelle nostre paure, nei nostri pregiudizi. E allo stesso tempo, ci rendiamo conto
+                    nelle nostre paure, nei nostre pregiudizi. E allo stesso tempo, ci rendiamo conto
                     che la chiave per aprirla è sempre stata nelle nostre mani.
                   </p>
                 </ParallaxElement>
