@@ -31,12 +31,12 @@ export const IntroSection: React.FC = () => {
           />
         </h1>
         
-        <p className="text-xl md:text-2xl text-fog/80 mb-10 italic font-display">
+        <p className="text-xl md:text-2xl text-fog/80 mb-6 italic font-display leading-relaxed px-4">
           Un nuovo progetto che esplora un mondo post-apocalittico<br />
           dove sopravvive solo l'astrazione della giovinezza
         </p>
         
-        <p className="text-lg md:text-xl text-toxic/90 mb-4 font-mono mt-8">
+        <p className="text-lg md:text-xl text-toxic/90 mb-4 font-mono mt-4">
           Qui il tempo è finito. Ma tu puoi ancora scegliere.
         </p>
       </div>

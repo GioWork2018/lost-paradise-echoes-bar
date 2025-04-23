@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Mail, MapPin } from 'lucide-react';
@@ -51,8 +50,13 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2 text-fog/80">
                 <Instagram size={16} className="text-rust" />
-                <a href="https://instagram.com/giovannimotta" target="_blank" rel="noopener noreferrer" className="hover:text-toxic transition-colors duration-300">
-                  @giovannimotta
+                <a 
+                  href="https://instagram.com/mottagiovanni" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-toxic transition-colors duration-300"
+                >
+                  @mottagiovanni
                 </a>
               </li>
               <li className="flex items-start gap-2 text-fog/80">
