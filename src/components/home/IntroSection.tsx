@@ -14,15 +14,15 @@ export const IntroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden px-4">
+    <section className="min-h-[100dvh] flex flex-col items-center justify-center relative overflow-hidden px-4 sm:px-6">
       {/* Background Video Simulation (gradient + overlay) */}
       <div className="absolute inset-0 bg-gradient-to-b from-night to-ash overflow-hidden">
         <div className="absolute inset-0 bg-jonnyboy bg-cover bg-center bg-no-repeat opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-night to-transparent"></div>
       </div>
       
-      <div className={`max-w-4xl mx-auto text-center z-10 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-display mb-4 md:mb-6">
+      <div className={`w-full max-w-4xl mx-auto text-center z-10 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display mb-4 md:mb-6 px-2">
           <GlitchText 
             text="LOST PARADISE" 
             intensity="medium"
@@ -31,12 +31,12 @@ export const IntroSection: React.FC = () => {
           />
         </h1>
         
-        <p className="text-xl md:text-2xl text-fog/80 mb-6 italic font-display leading-relaxed px-4">
-          Un nuovo progetto che esplora un mondo post-apocalittico<br />
+        <p className="text-lg sm:text-xl md:text-2xl text-fog/80 mb-6 italic font-display leading-relaxed px-2 sm:px-4">
+          Un nuovo progetto che esplora un mondo post-apocalittico<br className="hidden sm:block" />
           dove sopravvive solo l'astrazione della giovinezza
         </p>
         
-        <p className="text-lg md:text-xl text-toxic/90 mb-4 font-mono mt-4">
+        <p className="text-base sm:text-lg md:text-xl text-toxic/90 mb-4 font-mono mt-4 px-2">
           Qui il tempo è finito. Ma tu puoi ancora scegliere.
         </p>
       </div>
