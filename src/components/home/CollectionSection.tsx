@@ -95,7 +95,7 @@ export const CollectionSection: React.FC = () => {
               title="Lost Paradise"
               description="Dipinto Acrilico su Tela, manifesto visivo del progetto."
               price="Su richiesta"
-              image="/lovable-uploads/332b58a5-43ae-472f-aeb4-6dc1792b1ba0.png"
+              image="/lovable-uploads/68ce6b01-7363-4a15-a495-2b42c8a150ab.png"
               details={["100 x 150 cm", "Collaborazione con Maddox Gallery", "Opera principale"]}
             />
           </ParallaxElement>

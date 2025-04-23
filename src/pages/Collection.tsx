@@ -150,7 +150,7 @@ const Collection: React.FC = () => {
               <ParallaxElement>
                 <div className="aspect-[2/3] max-w-md mx-auto rusty-border">
                   <img 
-                    src="/lovable-uploads/332b58a5-43ae-472f-aeb4-6dc1792b1ba0.png" 
+                    src="/lovable-uploads/68ce6b01-7363-4a15-a495-2b42c8a150ab.png" 
                     alt="Lost Paradise"
                     className="w-full h-full object-cover"
                   />
